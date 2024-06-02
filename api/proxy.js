@@ -6,7 +6,7 @@ export default async function handler(req, res) {
 
   if (method === 'GET') {
     try {
-      const response = await fetch('https://newsapi.org/v2/everything?q=${searchQuery}', {
+      const response = await fetch('https://newsapi.org/v2/everything', {
         headers: {
           'Authorization': `Bearer ${process.env.API_KEY}` // Replace with your actual API key header if needed
         }
