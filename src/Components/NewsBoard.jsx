@@ -50,7 +50,7 @@ function NewsBoard() {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    fetch('/api/proxy')
+    fetch('/api/proxy.js')
       .then(response => {
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
