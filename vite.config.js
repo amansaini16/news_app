@@ -10,8 +10,13 @@ import { defineConfig } from 'vite';
 export default defineConfig({
   server: {
     proxy: {
-      '/api': {
-        target: 'https://newsapi.org/v2',
+      '/api/everything': {
+        target: 'https://newsapi.org/v2/everything',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, '')
+      },
+      '/api/headlines': {
+        target: 'https://newsapi.org/v2/top-headlines',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, '')
       }
