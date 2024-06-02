@@ -8,9 +8,9 @@ const NewsBoard = ({ category, searchQuery }) => {
   const fetchData = () => {
     let url;
     if (searchQuery) {
-      url = `https://newsapi.org/v2/everything?q=${searchQuery}&apiKey=2fe95fcde45746dcb281c234d6068bd0`;
+      url = `https://newsapi.org/v2/everything?q=${searchQuery}&apiKey=fd0dde08e8cd4c6ca34c5e0e11348afe`;
     } else {
-      url = `https://newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey=2fe95fcde45746dcb281c234d6068bd0`;
+      url = `https://newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey=fd0dde08e8cd4c6ca34c5e0e11348afe`;
     }
 
     fetch(url)
